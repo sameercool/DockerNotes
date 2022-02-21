@@ -1,0 +1,9 @@
+API(Application programming interface)
+It enables the communication and data exchange between two seperate software
+systems. A software system implementing an API contains functions/sub-routines
+which can be executed by another software system.
+-------------------------------------------------
+Difference between API and webserives.
+-API is one type of webservices
+-All API's are webservices but all webservices are not API.
+-API is webservice that is wrapped in http protocol

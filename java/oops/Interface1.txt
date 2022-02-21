@@ -1,0 +1,17 @@
+Interface:
+Interface is used to get 100% security or data hiding.
+-In an interface the abstract class should definitely have the abstract
+method.
+Uses interface:
+1) It is used to achieve 100% data hiding.
+2) It supports multiple inheritance.
+3)We can achieve loose coupling. 
+Rule1:
+Interface class will be having public abstract method.
+Rule2:
+Like abstract interface method cannot have a body 
+Rule3:
+to declare variables compiler itself will give public static
+even if we do not give variables insied interface.
+- Interface allows multiple inheritance.
+A B qualities in C it is called multiple inheritance.

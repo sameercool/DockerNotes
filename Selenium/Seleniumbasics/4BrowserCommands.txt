@@ -1,0 +1,85 @@
+The very basic browser operations of WebDriver include opening a browser; 
+perform few tasks and then closing the browser.
+
+Given are some of the most commonly used Browser commands for Selenium WebDriver.
+
+1. Get Command:
+In WebDriver, this method loads a new web page in the existing browser window.
+driver.get(URL);     
+  
+// Or can be written as  
+       
+String URL = "URL";  
+driver.get(URL); 
+--------------------------------------
+2. Get Title Command
+Method:
+
+getTitle(): String  
+In WebDriver, this method fetches the title of the current web page.
+ It accepts no parameter and returns a String.
+
+The respective command to fetch the title of the current page can be written as: 
+driver.getTitle();    
+         
+    // Or can be written as  
+       
+ String Title = driver.getTitle(); 
+-----------------------------------------------
+3. Get Current URL Command
+Method:
+
+getCurrentUrl(): String  
+In WebDriver, this method fetches the string representing the Current URL of the 
+current web page. 
+It accepts nothing as parameter and returns a String value.
+
+The respective command to fetch the string representing the current URL can be
+ written as:
+driver.getCurrentUrl();  
+       
+    //Or can be written as  
+           
+    String CurrentUrl = driver.getCurrentUrl(); 
+-----------------------------------------------
+4. Get Page Source Command
+Method:
+
+getPageSource(): String  
+In WebDriver, this method returns the source code of the current web page
+ loaded on the current browser. It accepts nothing as parameter and returns a
+ String value.
+
+The respective command to get the source code of the current web page can be 
+written as:
+
+driver.getPageSource();  
+       
+    //Or can be written as   
+    String PageSource = driver.getPageSource();  
+--------------------------------------------------------------
+5. Close Command
+Method:
+
+close(): void  
+This method terminates the current browser window operating by WebDriver at
+ the current time. If the current window is the only window operating by WebDriver,
+ it terminates the browser as well. This method accepts nothing as parameter and 
+returns void.
+  The respective command to terminate the browser window can be written as:
+
+driver.close();  
+-----------------------------------------------------------------------------
+6. Quit Command
+Method:
+
+quit(): void  
+This method terminates all windows operating by WebDriver. 
+It terminates all tabs as well as the browser itself. It accepts nothing as 
+parameter and returns void.
+
+
+The respective command to terminate all windows can be written as:
+
+driver.quit();  
+-----------------------------------------------------------------------------

@@ -1,0 +1,30 @@
+Steps to download ChromeDriver
+Open ChromeDriver download page –
+ https://sites.google.com/a/chromium.org/chromedriver/downloads
+This page contains all the versions of Selenium ChromeDriver. ...
+If you are using Chrome version 93, download ChromeDriver 93.0.4577.63
+Click on chromedriver_win32. ...
+Once you download the zip file, unzip it to retrieve chromedriver.exe.
+
+copy the file to any folder of your choice,extract the file
+-------------------------------------------------------------------------
+Steps to dwonload mozilla driver
+step1:
+Go to 
+https://github.com/mozilla/geckodriver/releases
+Step 2:
+ Choose the latest version and download as per the operating system you are 
+currently working on.
+step 3:
+copy the file to any folder of your choice,extract the file
+-------------------------------------------------------------------------
+Steps to download IE driver server
+Step1:
+Go to 
+https://selenium-release.storage.googleapis.com/index.html?path=2.48/
+Step2:
+ Choose the latest version and download as per the operating system you are 
+currently working on.
+step3:
+copy the file to any folder of your choice,extract the file
+

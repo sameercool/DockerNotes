@@ -1,0 +1,12 @@
+Hybrid framework:
+
+Using frameworks leads to increased code reusability, higher portability, 
+reduced cost of script maintenance, better code readability, etc. ... 
+The Hybrid framework offers these advantages by functioning as a combination of both Keeyword and Data-Driven framework.
+----------------------------------------
+Use of hybrid framework:
+Hybrid Driven framework is mostly used by manual testers who don't have much knowledge of programming languages. 
+Such people can just have a look at the Keywords, Test data, 
+Object repository and start creating the test case right away, without having to code anything in the framework
+
+------------------------------------

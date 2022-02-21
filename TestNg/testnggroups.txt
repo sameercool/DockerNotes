@@ -1,0 +1,91 @@
+TestNG groups combine the tests into groups and let the tester choose which ones to run and which ones to ignore.
+Along with it, we can combine different groups in TestNG, use a regular expression,
+and much more.
+OR
+Grouping is a feature in testng where in we can assign tests or classes to one or more groups.
+
+It is important to note that Groups are declared in the testng.xml file in the TestNG and can be found inside 
+<test> tag or <suite> tag.
+
+Also, remember that the groups defined in <test> tag apply to only that particular test tag, but the groups 
+defined in <suite> tag andapply to all the <test> tags in the XML file.
+----------------------------------
+how to create a xml file:
+right click on the class(testNGgroups) then ->testng->convert to testng and finish
+---------------------------------------------
+
+syntax of groups:
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <test  name="Test1">
+  <groups>
+  <run>
+  <include name="sanity"/>
+  </run>
+  </groups>
+    <classes>
+      <class name="SeleniumDemo1.TestNGGroups"/>
+    </classes>
+  </test> <!-- Test1 -->
+</suite> <!-- Suite1 -->
+NOTE:
+we need to run as test suite the xml file not the program(on the xml file rihtclick-> run as->testng suite)
+=============================================================
+we will exclude also and check the 
+remove previous xml and paste the below xml wherein the exclude is changed.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <test  name="Test1">
+  <groups>
+  <run>
+  <include name="sanity"></include>
+  <exclude name="regression"></exclude>
+  </run>
+  </groups>
+    <classes>
+      <class name="SeleniumDemo1.TestNGGroups"/>
+    </classes>
+  </test> <!-- Test1 -->
+</suite> <!-- Suite1 -->
+=======================================================
+META GROUPS:
+In meta groups we can decide what to include in custom group and what not
+syntax:
+in xml file under opening groups
+<groups>
+  <define name="metagroup">
+  <include name="smoke"></include>
+  <include name="regression"></include>
+  </define>
+  <run>
+  
+  <include name="metagroup"></include>
+ 
+  </run>
+  </groups>
+---------------------------------------
+copy the below xml code
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite1">
+  <test  name="Test1">
+  <groups>
+  <define name="metagroup">
+  <include name="smoke"></include>
+  <include name="regression"></include>
+  </define>
+  <run>
+  
+  <include name="metagroup"></include>
+ 
+  </run>
+  </groups>
+    <classes>
+      <class name="SeleniumDemo1.TestNGGroups"/>
+    </classes>
+  </test> <!-- Test1 -->
+</suite> <!-- Suite1 -->
+

@@ -1,0 +1,25 @@
+OOps is a methodology/paradigm to access real world
+entities.
+-it makes development and maintainance easy.
+-it provides data hiding
+-it helps to stimulate real world data
+-less memory and organized
+-reusable
+'
+OOPS follow the following 4 principles, they are
+object
+class
+1)Encapsulation:
+2) Abstraction
+3)inheritance
+4)polymorphism
+OBJECT
+Object is a physical entity.
+-object is defined as instance of class.
+Eg:dog , chair, pen, table
+CLASS
+class is a logical entity.
+It is a blue print using which we can create 
+individual objects.
+
+

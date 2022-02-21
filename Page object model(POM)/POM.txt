@@ -1,0 +1,27 @@
+Page object model(POM):
+Pom basically Creating java classes
+for the each page of our application,
+and storing related webelements,
+and methods in their respective classes.
+    
+Advantages of POM =
+First of all, it makes our code REUSABLE.
+I don't have to repeatedly locate web elements
+in every single other class.
+Secondly it is EASY TO MAINTAIN. I store one
+webelement in one class and it is a lot easier to
+fix any issue with that web element because I know
+exactly where everything is stored.
+Thirdly is seperating webelements and our test cases.
+Our test cases will be cleaner therefore 
+easy to manage overall.
+----------------------------------------
+Step1:
+Create a class for each web page.
+
+HOW I CREATE POM =  
+#1-I Create constructor, 
+and pass PageFactory.initElements(objectOfClass, Driver)
+#2- I use @FindBy annotation to locate web elements
+            - FindBy annotation comes from Selenium.
+----------------------------------------------------------

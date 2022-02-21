@@ -1,0 +1,6 @@
+Can we set priority manually in TestNG annotations?
+Definitely yes! TestNG provides this feature of defining the priority as a parameter in its annotations.
+ TestNG figures out the priority and which test to run with the help of this parameter.
+
+ class ParameterInTestNG
+

@@ -1,0 +1,74 @@
+Locators:
+A website is a collection of webpages
+-A webpage is a collection of web elements
+-Text field in images, radiobuttons, links, checkboxes are webelements
+-Before performing action on any web elements selenium has to locate the web element 
+for that selenium use the locators
+-A webpage is made up of html code
+
+WEBELEMENTS:
+Selenium Webdriver represents all the HTML elements as WebElements. 
+This class provides a mechanism to represent them as objects & perform various
+actions on the related elements. Typically, the findElement method in 
+remoteDriver returns an object of class webElement
+-----------------------------------------
+Types of locators:
+There are 8 types of locators
+BASIC LOCATORS:
+1)id
+2) name
+3) class
+4) tagname
+5)linktext
+6)partial linktext
+
+ADVANCED LOCATORS:
+
+7) CSS Selectors
+8) Xpath
+--------------------------------------------------
+Tagname:
+
+A tagName is a part of a DOM structure where every element on a page is 
+been defined via tag like input tag, button tag or anchor tag etc. 
+Each tag has multiple attributes like ID, name, value class etc. As far as
+ other locators in Selenium are concerned, 
+go to
+https://omayo.blogspot.com/
+to check the various tags in a webpage
+
+1)to get single tagname we use below syntax:
+ WebElement e2 = driver.findElement(By.tagName(""));
+NOTE: If there are multiple tagnames of the same name present in a page , the first 
+tagname would be prioritized.
+
+2)to get all the elements of the same tag present in a webpage we use syntax given 
+below:
+- we need to use iterator to get all the elements
+List<WebElement> elements = driver.findElements(By.tagName(""));
+for(WebElement i:elements){
+sytem.out.println(i.getText());
+
+}
+---------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+CSS Selector:
+Essentially, the CSS Selector combines an element selector and a 
+selector value that can identify particular elements on a web page.
+types:
+1) tag & id 
+syntax: tag#id
+2) tag & class
+syntax: tag.class
+3) tag & attribute
+syntax: tag[attr_name='attr_value']
+4)tag.class & attribute
+syntax: tag.class[attr_name='attr_value']
+5)substring:
+starts with(^)
+syntax:tag[attr-name^='value of the substring']
+ends with($)
+syntax: tag[attr_name$='value of substring']
+contains(*)
+tag[attr_name*='value of substring']

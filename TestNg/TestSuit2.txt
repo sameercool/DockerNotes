@@ -1,0 +1,19 @@
+Test Suit in testNG
+A test suite is a collection of test cases intended to test a behavior
+or a set of behaviors of software program. In TestNG, we cannot define a 
+suite in testing source code, but it is represented by one XML file, as 
+suite is the feature of execution. It also allows flexible configuration of the tests to be run.
+xml file testng.xml
+Test Priority in TestNG
+Although TestNG annotations decide in which order the tests will run, priorities do more or less the same job.
+
+The priorities are an additional option that we can put to use with the test annotations. This attribute decides 
+the priority of the annotation. But remember that priority check happens after the annotation check by TestNG. So
+ the TestNG annotation hierarchy is followed first and then priority-based execution. The larger the priority number, 
+the lower is its priority. So a method with priority 1 will run after the test with priority 0.  A genuine question 
+after learning this is, what if the priorities are the same for two methods? Let's see those.
+
+TestNG Methods With Same Priorities
+It might happen (intentionally or unintentionally) that the tester decides to provide the same priorities for different 
+methods under TestNG annotations. In that case, TestNG runs the test cases in the alphabetical order. So the following test cases:
+eclipse prg "TestNG"

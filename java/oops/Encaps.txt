@@ -1,0 +1,7 @@
+Encapsulation:
+Encapsulation is  a process of wrapping code or data together
+into a single unit.
+Steps to achieve encapsulation:
+1) Declare the variables of a class as private.
+2)Declare tge public setter and getter methods to modify 
+and use the variables.

@@ -1,0 +1,20 @@
+we need to add xml file and install testng in our ide
+in eclipse go to help-> search for testng -> add
+-create a folder and add this xml file to run testng 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+--------------------
+we need to add testng jars from build path
+
+
+====================
+A testNG class consists of test methods which is annoted by @Test is referred as thest method a TestNG class can
+contain multiple test methods
+-Test methods are also referred as test cases
+-when multiple test cases are present the ascii value of the test method is compared to the one with lesser
+ascii value is executed first
+----------------------

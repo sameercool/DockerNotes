@@ -1,0 +1,44 @@
+Selenium provides a playback tool for authoring functional tests .
+-Selenium is a set of libraries that help us automate and interact 
+ with the browsers
+ 
+  Why Selenium?
+  - OPEN SOURCE -> FREE
+    - It supports different types of browsers
+    - It supports multiple different programming languages
+    - Huge community behind it so many answers to any problems/questions
+    - Could run on different OS systems such as: Mac, Windows, Linux etc.
+----------------------------------------------------------------------------
+• Selenium IDE: implemented as a Chrome and Firefox extension, 
+and allows you to record, edit, and debug tests. 
+• Selenium RC: to write automated web application 
+UI tests in any programming language 
+• Selenium WebDriver: execute your tests against different browsers 
+• Selenium GRID: run your tests on different machines 
+against different browsers in parallel.
+-----------------------------------------------------
+Selenium WebDriver:
+
+WebDriver object represents the browser in Selenium.
+Using this object you can control the Web browser.
+It is an interface of the org.openqa.selenium.* package.
+Upon instantiating the implementations of this class 
+the browser will be launched.
+FirefoxDrive, ChromeDriver, 
+InternetExplorerDriver, SafariDriver, OperaDriver, 
+HtmlUnitDriver, RemoteWebDriver are few 
+implementations of the WebDriver Interface.
+-------------------------------------------------
+How to install selenium webdriver
+Step1: 
+Go to https://www.selenium.dev/
+step2: 
+Go to downloads
+under downloads go to Selenium Clients and WebDriver Language Bindings
+step3:
+under java click on the link beside stable: 3.141.59(November 14,2018)
+download the files and extract the files into folder of your choice
+step 4:
+Go to project.
+-right click on project->properties->java build path-> libraries-> add external jars
+- selec the selenium jar files from your file location and apply and close

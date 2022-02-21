@@ -1,0 +1,62 @@
+we can do validations using
+get(url).then().body("expected","actual");
+check r1 pic
+using static import of the library
+import static io.restassured.RestAssured.*;
+
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+check r1.1
+syntax:
+	baseURI="https://reqres.in/api";
+given()
+.get("/users?page=2")
+.then().statusCode(200)
+.body("data[1].id",equalTo(8));
+
+-> we can also use logall to get the complete response on the console
+	baseURI="https://reqres.in/api";
+given()
+.get("/users?page=2")
+.then().statusCode(200)
+.body("data[1].id",equalTo(8))
+.log().all();
+
+
+GET and POST:
+GET:
+syntax:
+baseURI="https://reqres.in/api";
+given().
+get("/users?page=2").
+then().
+statusCode(200).
+body("data[4].first_name",equalTo("Lindsay")); 
+
+->>>.we can verify if the firstnames are present in the list using hasitems():
+baseURI="https://reqres.in/api";
+given().
+get("/users?page=2").
+then().
+statusCode(200).
+body("data[4].first_name",equalTo("Lindsay"))
+body("data.first_name",hasItems("Michael,Tobias")); 
+----------------------------------------------------------------------------
+POST:
+we need to create an object to store the jsonobjects that we want to post on particular request api
+-for that we need to get the "json simple" dependency from the maven repositery and add it to the 
+below is the dependency
+
+
+<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+<dependency>
+    <groupId>com.googlecode.json-simple</groupId>
+    <artifactId>json-simple</artifactId>
+    <version>1.1.1</version>
+</dependency>
+
+
+-we need to create JSONObject 
+and then follow the steps for post
+----------------------------------------------------------------------------------------
+PUT PATCH and DELETE

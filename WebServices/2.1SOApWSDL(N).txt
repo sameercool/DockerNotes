@@ -1,0 +1,68 @@
+The main work of webservice is to transfer the data from one application to the
+another application.
+-Distributed applications:SOA
+considerations:
+=Data types that are not compatible across different systems.
+Means we do not know in which datatype the sender application will send and we do not
+know which data type the receiver application will accept
+=server loss
+if there are two applications server and client, if server is down and the data
+will not be sent to the client , we need to consider that also.
+=client loss
+if there is an network issue while data is being received by the client it comes
+under client loss we need to consider that as well. 
+=Retrying a call
+when the data is not transferred from one application to another we need to make 
+sure it is tried again.
+=security
+the data in between two applications should be sent securely.
+=synchronous clocks between multiple computers:
+The data should be sent from one application and should be received by the client
+in synchronized manner.
+------------------------------------------------------------
+Synchronous function calls:
+if we consider a messaging scenario where in we want to send 100 messages
+-In synchronous it will send 1 message in a second and for 100 messages it will 
+take 100 secs
+-Asynchronous messaging
+In asynchronous messaging multiple messages would be sent at a time
+-------------------------------------------------------------
+XML:(Extensible markup language)
+It is an data exchange format, we are sending the data from one application and
+receiving from other end. So the sender will give the output and the receiver will take 
+the input/
+=the main disadvantage of this is 
+if we consider a bank application having various details like.
+account number, name, mobile number, password and then the minimum balance....
+-if there is error at minimum balance, we need to check the whole xml and see the
+minimum balance and then it will show the error.
+-It is not structured , to overcome this we came up with soap
+------------------------------------------------ 
+SOAP(simple object access protocol):
+This is more structured than normal xml file.
+-As here there would be envelope, header and body would be there
+-In this xml file you will have seperate section for fault tag.
+-So if there is any error in the execution we can check that in the fault tag.
+eg:
+	<soap:Fault>
+  ...
+  </soap:Fault>
+---------------------------------------
+WSDL (webservices descriptive language)
+-Our soap webservices would be wrapped into wsdl
+WSDL documents:
+-it will describe the webservice
+-the provider will use the soap xml and this soap xml is wrapped inside wsdl
+ , in wsdl various things such as data type, message, port is present
+-which will tell what is the operation to be performed 
+- it will also have input and output messages.
+eg:
+----------------------------------------------------
+Architecture or styles:(both will support http (hypertext transfer protocol)
+SOAP- uses (support) xml
+REST- uses (support) XML, json, text
+
+-COMMUNICATION LANGUAGES
+XML
+JSON
+--------------------------------------------

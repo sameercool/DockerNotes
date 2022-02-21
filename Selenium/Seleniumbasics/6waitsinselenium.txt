@@ -1,0 +1,50 @@
+
+- Synchronization is making sure our driverand browser are on the same page.
+- Since selenium browser driver is a lot faster compared to the browsers , we use
+  different types of waits to make sure selenium is synchronized with browsers.
+
+Implicit wait:
+Explicit waits:
+Fluent wait:
+
+
+Implicit wait:
+
+Everytime we are trying to locate a webelement is triggered. By default wait time is 0 second.
+If we set the time to 10 seconds, and our driver not able to find element, it will count for
+given time. If found webelement it doesn't throw an exception.
+syntax:
+
+- driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+before giving no such element found exception.
+
+--------------------------------------------------------------------------------------------------
+Explicit wait:
+This is used when you dont know how much time it will take to load the elements in the webpage
+for example it might load in 2 seconds or it might take upto 10 seconds in that case we do not 
+want to wait for 10 seconds if the page is loaded in 2 seconds
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------
+FluentWait can define the maximum amount of time to wait for a specific condition
+and frequency/interval with which to check the condition before throwing an 
+“ElementNotVisibleException” exception.
+
+To say in effortless manner, it triesto find the web element repeatedly at 
+regular intervals of time until the timeout or till the object gets found.
+
+We use FluentWait commands mainly when we have web elements which sometimes 
+visible in few seconds and some times take more time than usual.We could set the default
+ polling period based on our requirement.
+eg:
+-It willl check for the element for the first thirty seconds and if still the element is not found
+it will poll that is it will wait for 3 seconds then again it will start the timer from 0-30 seconds
+
+Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)							
+	.withTimeout(30, TimeUnit.SECONDS) 			
+	.pollingEvery(3, TimeUnit.SECONDS) 			
+	.ignoring(NoSuchElementException.class);
+

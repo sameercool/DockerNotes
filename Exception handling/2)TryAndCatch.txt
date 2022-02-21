@@ -1,0 +1,10 @@
+Throwable class-> Exceptions
+                            -checked exceptions
+                              eg: IO or compile time exception
+                            -unchecked exceptions
+                              eg: runtime or null pointer exception.
+                                  -arrayindexoutofboundexception
+                                  -file not found exception
+                ->errors-
+                         -virtual machine error
+                         -Assertion error

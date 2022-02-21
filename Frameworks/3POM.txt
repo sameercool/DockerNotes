@@ -1,0 +1,19 @@
+
+In normal script we write all the locators and actions in a single class.
+Whereas in POM all the object locators are stored in a seperate class and the test methods are defined seperately.
+Design principle:
+Create seperate Object Repositery to store object locators.
+-For each web page there should be seperate page class.
+Eg:
+If take an example of facebook website.
+The pages in facebook are 
+Webpage1- FbloginPage.java
+webpage2- FbloginPage.java
+The tests are
+TestCase1- FbloginTest.java-TestBase.java
+-----------------------------------------------
+How to create POM classes in eclipse:
+Go to File-> Go to New-> Others -> Maven Project to create a new Java project.
+Step 2: Add the dependencies to pom.xml file.
+Step 3: Create the packages. Create the packages under the src/main/java folder and the src/test/java folder 
+and start writing the piece of code.

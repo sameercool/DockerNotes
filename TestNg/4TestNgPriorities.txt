@@ -1,0 +1,16 @@
+In a testNG class the order of executio of the test methods is based on the alphabetical orderor the
+ascii value
+=we can change the order of execution of the test cases depending upon the requirement using the concept 
+of priorities.
+SYNTAX:
+@Test (priority= priority number)
+priority number=1,2,3,4...
+----------------------------------------------------
+TestNG with same priority:
+If multiple test cases having same priority the ascii value pf the method is compared
+--------------------------------------
+TestNG without priority:
+Whenever test methods are given priorities and some of them are not, the test methods without priority
+will get executed first
+Note:
+The methods with 0 priority will be assigned to 0 priority by default

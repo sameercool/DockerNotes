@@ -1,0 +1,23 @@
+ABSTRACTION:
+Abstraction is hiding the unnecessary data and showing only important data to the user.
+Rules:
+eg: car
+The necessary parts are doors windows and tyres.
+The parts which are not visible to the user is engine.
+- Abstraction class
+- Abstraction method
+- Abstraction can achieve (0-100)
+Rule1:
+A method with no body is called as an abstract method.
+eg: skeleton.
+Rule2:
+A method should always be declared as an abstract classs or if a class has a abstract method the class name should also be 
+abstract.
+Rule3:
+If a class extends abstract class then the class should havee to implement all the abstract methods in parent class or it 
+has to be declared abstract as well.
+rule4:
+Abstract methods in an abstract class are overridden inderived concrete classes otherwise we will get compile time error.
+rule5:
+In abstraction methods in an abstract class we cannot create an object for abstract class we can only create object reference.
+

@@ -1,0 +1,94 @@
+1)why is string immutable in java
+>When we create a string in java like String s1="hello"; then an object will be created in string pool(hello) and s1 will be pointing to hello.Now if again we do
+ String s2="hello"; then another object will not be create but s2 will point to hello because JVM will first check if the same object is present in string pool or not.
+If not present then only a new one is created else not.
+
+2)what is static in java
+Static keyword is used for memory management. we can apply java static keyword with variables methods and block the static keyword belongs to class we can access the static
+variable using classths feature is useful when we want to create a variable common to all the instances of the class
+>static block
+>static variables
+>static methods
+
+3)What is final in java?
+Final is used to apply restrictions on class, method, and variable.
+The final class can't be inherited, final method can't be overridden,and final variable value can't be changed. Final is a keyword
+
+4) what is this in java
+this keyword is used to differentiate the local and instancevariables if the names of local and instance are same it will create shadowing problem 
+to overcome this we use this keyword.to tell that the variable is instance to the class.
+
+5) what is finally in java
+The finally keyword is used in association with a try/catch block and guarantees that a section of code will be executed, even if an exception is thrown.
+ The finally block will be executed after the try and catch blocks, but before control transfers back to its origin.
+6)what is autoboxing and unboxing 
+autoboxing is converting the primitive data type to object.
+unboxing is converting the object back to the primitive data type.
+7)what is serialization and deserialization in java
+Serialization is a mechanism of converting the state of an object into a byte stream. Deserialization is the reverse process
+ where the byte stream is used to recreate the actual Java object in memory. This mechanism is used to persist the object
+8)what is abstract modifier in java
+abstract is a non-access modifier in java applicable for classes, methods but not variables.
+ It is used to achieve abstraction which is one of the pillar of Object Oriented Programming(OOP).
+9)what is call by value and call by reference in java
+Call by Value means calling a method with a parameter as value. Through this, the argument value is passed to the parameter.
+public class Tester{
+   public static void main(String[] args){
+      int a = 30;
+      int b = 45;
+      System.out.println("Before swapping, a = " + a + " and b = " + b);
+      // Invoke the swap method
+      swapFunction(a, b);
+      System.out.println("\n**Now, Before and After swapping values will be same here**:");
+While Call by Reference means calling a method with a parameter as a reference. 
+Through this, the argument reference is passed to the parameter.
+public class JavaTester {
+   public static void main(String[] args) {
+      IntWrapper a = new IntWrapper(30);
+      IntWrapper b = new IntWrapper(45);
+
+>what are checked and unchecked exceptions in java
+Checked Exceptions are checked at runtime of the program, while Unchecked Exceptions are checked at the compile time of the program. Checked Exceptions and 
+Unchecked Exceptions both can be created manually.
+
+>Can we create objects to the abstract classes
+No, we can't create an object of an abstract class. But we can create a reference variable of an abstract class.
+ The reference variable is used to refer to the objects of derived classes (subclasses of abstract class).
+
+>can we create constructor for abstract class
+We can create constructor in abstract class , it does’nt give any compilation error.
+
+> • Can constructor be overloaded. Explain why? 
+The technique of having two (or more) constructors in a class is known as constructor overloading. 
+A class can have multiple constructors that differ in the number and/or type of their parameters. It's not, however, possible to have two constructors with the exact same parameters.
+
+>can we override main method in java
+No we cant
+
+>can we overload main method
+Yes, We can overload the main method in java but JVM only calls the original main method, it will never call our overloaded main method. Output: ... 
+So, to execute overloaded methods of main, we must call them from the original main method.
+
+>Final, finally and final variable
+A final class cannnot be inherited, the final method cannot be overriden. The final variable cannot be reassigned.
+
+>String buffer and string builder
+String buffer is synchronized and thread safe whereas string builder is not synchronized or thread safe.
+That means in string builder we can have two threads in a method.
+
+>can we create object for a abstract class
+No we cannot create object for a abstract class but we can create reference variable for abstract class, the reference variable is used to refer to the objects of the 
+derived class of the abstract class.
+
+> can we create an object for interface
+No  we cannot.
+
+>Can we create a constructor for an abstract class
+yes we can create a constructor for abstract class. if we do not create a constructor the compiler will create a default constructor.
+
+> Can the constructor be overloaded
+The technique of having two (or more) constructors in a class is known as constructor overloading. A class can have 
+multiple constructors that differ in the number and/or type of their parameters. It's not, however, possible to have 
+two constructors with the exact same parameters.
+
+>

@@ -1,0 +1,105 @@
+life cycle of docker image or container life cycle 
+step1:pulling
+When we pull a particular image(helloworld,jenkins) from docker hub to your
+hardware(laptop)
+step2:image creation
+-once you download the image from hub it willl be image creation.
+Step3: running
+-Container will only be created when you run a particular image in your cmd
+Step4: commands
+-Once container is created you can modify the container that is add, delete
+ start and restart.
+
+-----------------------------------------------------------------------------
+DOCKER COMMANDS:
+
+To know the version of your docker use the command
+docker --version in cmd
+-TO get the images go to dockerhub and search for image you want for your docker
+2) To pull any image you need to use 
+docker pull (image name)
+-I want to pull ubuntu to my docker 
+so run (docker pull ubuntu) in your cmd
+-now the ubuntu image would be downloaded
+
+3) NO OF IMAGES:
+To see number of images created in your docker 
+run the command 
+(docker images)
+
+4)NO OF CONTAINERS NOT RUNNING:
+ To see number of containers running and not running we can see that using 
+command
+
+(docker ps -a)
+
+5)COMMAND TO CREATE A DOCKER CONTAINER:
+to create a container in docker the command is
+(docker run -it -d (image name)
+here it means interactive mode so that it could be present in background also
+d means the deamon thread that means it should run even if the terminal is closed
+EG:
+(docker run -it -d ubuntu)
+- you will get a id once you click enter that means container is created.
+
+6)TO CHECK THE ACTIVE CONTAINERS:
+ To check the up and running containers in the docker use command
+(docker ps) it will show number of running containers
+
+
+7)TO RESTART A CONTAINER:
+to restart a container use the container name for eg:here for ubuntu the name is
+distracted_ishizaka , use command
+(docker restart distracted_ishizaka) and the container would be restarted.
+-type again (docker ps -a) to get the time of restart of container
+
+8)TO STOP A CONTAINER:
+to stop a container us the name of the container
+eg:
+(docker stop distracted_ishizaka) 
+-then use (docker ps -a) to know the status of the container
+-it will show exit time
+
+9)TO START A CONTAINER:
+-To start a container use the name of container after docker
+eg:
+(docker start distracted_ishizaka)
+-then use (docker ps -a) to know the status of the container
+
+
+11)TO REMOVE A CONTAINER:
+-To remove a container first we need to stop the docker because we cannot remove the
+running docker.
+-use (docker stop container ID)
+eg:docker stop 4863727d1cde
+-Once it is stopped now we can remove the docker the command to remove is
+docker rm container ID
+eg:(docker rm 4863727d1cde)
+
+-use the command (docker ps -a) and see if the docker is removed or not
+
+12)TO REMOVE AN IMAGE:
+=To check the images in your docker use docker images
+-When we remove a container the image will still be there the image can be removed
+using the following syntax. 
+(docker rmi imageID)
+eg:
+docker rmi feb5d9fea6a5
+-let us again add the ubuntu using
+(docker pull ubuntu)
+
+13)TO FORCEFULLY STOP A RUNNING CONTAINER:
+-The command used to forcefully stop the running container is
+(docker kill containerID)
+eg:docker kill a58dab4e677d
+
+14)TO INSPECT CONTAINER:
+To inspect a particular container the syntax is
+(docker inspect containerID)
+eg:docker inspect a58dab4e677d
+-you will get a json file or source code
+
+15)TO GET THE LIST OF IMAGES:
+You can either use docker images command or you can use
+(docker image ls)
+to get all the images of docker

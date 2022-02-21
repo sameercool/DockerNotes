@@ -1,0 +1,90 @@
+ Ways of adding driver software:
+
+1.System.setproperty(key, value)
+
+2.Environment variables
+
+3.pasting the software directly into the project
+
+---------------------------------------
+
+System.setproperty for Chrome(Chromedriver):
+
+
+System.setproperty:
+
+System.setproperty for chrome:
+
+  import org.openqa.selenium.chrome.ChromeDriver;
+
+
+
+public class BrowserLaunchChrome
+
+{
+
+    public static void main( String[] args) {
+
+        System.setProperty("webdriver.chrome.driver", "D:\\selenium components\\chromedriver.exe");
+
+         ChromeDriver driver = new ChromeDriver();
+
+}
+
+}
+
+------------------------------------------
+
+System.setproperty for Mozilla(geckodriver):
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+
+public class BrowserLaunchGecko {
+
+	public static void main(String[] args) {
+
+	 System.setProperty("webdriver.gecko.driver", "D:\\selenium components\\geckodriver.exe");
+
+     FirefoxDriver driver1=new FirefoxDriver();
+
+}
+
+}
+
+-----------------------------------------
+
+System.setproperty for InternetExplorer(IEDriverserver);
+
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+
+
+public class BrowserLaunchIE {
+
+
+
+	public static void main(String[] args) {
+
+System.setProperty("webdriver.ie.driver", "D:\\selenium components\\IEDriverServer.exe"); 
+
+InternetExplorerDriver driver3=new InternetExplorerDriver();
+
+}
+
+}
+-----------------------------------------------------------
+---------------------------------------------------------
+2)Environment variables:
+-Right click on pc
+-Select properties
+-Select advanced system settings
+-under system variable select path
+-select selenium components click on ok
+Note:
+this approach is not followed in the industry as right click is disabled
+-----------------------------------------------------------------
+-------------------------------------------------------------------
+3)Pasting the software directly into the project:
+Copy the driver softwares and paste it in the project.

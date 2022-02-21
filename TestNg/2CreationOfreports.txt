@@ -1,0 +1,4 @@
+-Once the TestNG class is executed select the proect right click on refresh
+-A folder by name test output is displayed inside the folder we will have two types of reports
+1) index.html
+2) emilable-report.html

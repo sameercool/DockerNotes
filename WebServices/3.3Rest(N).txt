@@ -1,0 +1,6 @@
+SOAP
+- Communication happens using XML only
+- Request is sent to SOAP methods
+- Documentation is in WSDL (Wizdal)
+- Heavy, more secure, more stable
+- getting less popular

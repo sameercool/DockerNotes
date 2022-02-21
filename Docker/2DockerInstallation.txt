@@ -1,0 +1,35 @@
+Step1:
+If you are using windows 10 pro then we can install docker 
+go to google
+-search for docker download
+-go to first link i.e https://docs.docker.com/desktop/windows/install/#:~:text=Double%2Dclick%20Docker%20Desktop%20Installer,get%20it%20from%20Docker%20Hub.&text=When%20the%20installation%20is%20successful,to%20complete%20the%20installation%20process.
+-download the file and run it on your pc.
+------------------------
+If you are using windows 10 home then you can download docker desktop
+-go to google
+-search for docker desktop
+-go to the first link (https://www.docker.com/products/docker-desktop)
+--------------------------------------
+Step 2:
+Once it is installed go to the file folder and then run the  program
+-create an account in docker
+username:26091997786
+pass: Campus@123
+---------------------------------------
+step 3:
+Open the command prompt search for docker -v and you should get your docker version
+-----------------------------------------------
+step4: 
+In the command prompt search for (docker run hello-world)
+-It is a very popular image in docker
+-Since we have not created an image for helloworld
+-It will pull the image from library/hello-world
+----------------------------------------------------------------
+You can try to search the available images in your docker
+search for (docker images) in command prompt
+you will see the available images in docker
+-----------------------------------------------------
+If you want to see if the installation of container is done properly
+you can go to cmd and type docker run hello-world
+-----------------------------------------------------------
+

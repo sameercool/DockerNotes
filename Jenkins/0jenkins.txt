@@ -1,0 +1,11 @@
+Step1:
+Download jenkins
+------------
+step2:
+Run Jenkins
+java -jar jenkins.war
+java -jar jenkins.war --httpPort=9090
+
+Open the folder you wish to open the command prompt window from.
+Type cmd into the location bar at the top of the window and tap enter.
+The command prompt will now be opened in the desired location.

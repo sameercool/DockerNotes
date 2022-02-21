@@ -1,0 +1,59 @@
+OOPS:
+Object oriented programming system.
+-Inheritance
+-Polymorphism
+-Abstraction
+-Encapsulation.
+Class:
+class is a logical entity.
+-it will not occupy any memory.
+Eg:
+Animals
+-Variables would be present in class.
+-methods will also be present in class.
+eat()
+sleep()
+run()
+Obeject:
+_Object is a physical entity.
+-It occupies memory.
+-lion
+-tiger
+-cheetah
+ -to access the methods and variables present in the class
+we use objects.
+eg:
+tiger
+-------------------------------------
+Syntax for creating a class
+access modifier class className(Tiger)
+-methods run(){
+system.out.println("tiger is running");
+}
+-sleep()
+{
+system.out.println("tiger is sleeping");
+}
+-eat()
+{
+system.out.println("tiger is eating");
+}
+----------------------------------------
+Object is an instance of class
+Object consists of:
+-identity-> Name of the tiger
+-State/attribute-> breed, colour, age
+=Behaviours-> eat, sleep, run
+How  to create an object 
+- by new keyword
+2 new Instance()
+3 clone()
+4 deserialization
+5 factory methods.
+--------------------------------
+Syntax to create an object:
+Animal buzo:
+Animal buzo=new Animal();
+buzo.run();
+buzo.sleep();
+

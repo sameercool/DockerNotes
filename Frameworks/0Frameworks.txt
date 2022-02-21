@@ -1,0 +1,127 @@
+Introduction to framework:
+Let us talk about a simple situation where we ask a few members of the testing team to write different
+tests on same application. The starting point would be set of requirements that we want everybody
+to work on.
+key points in the automation example scenario:
+-Automate some piece of functionality.
+-Implement logging:
+ logging framework written in Java that provides an easy way for logging in Selenium. In a nutshell, the framework gives out 
+information about everything that goes on during the software execution
+provides insight into anything that may have gone wrong during software execution or automation.
+-Implement reporting.
+
+====Once we give the requirements the team members will start working on automating the requirements.
+And they will write the test cases in a manner in which they are more comfortable with.
+Problem with the approach of all writing cases in their own manner:
+-All the tests would be written in a different manner that will cause an error while running the test cases together.
+-All the tests will have custom ways of logging, that will bring in the problem in collecting logs in the end of the test run.
+-All tests will have different ways to fetch the data,some will be handcoded and some will pick from xml file or excel sheet.
+--------------------------------------------------------------------------------------------------------------------------------
+Why we need a framework?
+-The initial requirement of having a standard way of writing tests is what will evolve into framework.
+-Every company or teams will have different frameworks but whole idea will be to have a common set of rules.
+Eg:
+How do we start a car?
+-we open the car door.
+-close the door.
+-start the car.
+-apply gears
+-push the accelarators
+
+It is similar like a syntax of a programming language. Syntax set the rules. In testing framework it could be standard with which a test class
+needs to be designed or a standard which should always be followed to perform test .
+-------------------------------------------------------------------------------------------------------
+What is a framework :
+Framework are the set of rules and guidelines and structure that every automation engineer should follow while automating 
+an application.
+it is used to create reusable, modular and maintainable application.
+Selenium: it is a libary for web application automation.
+
+----------------------------------------------------------------------------------------------------------
+Components of a framework.
+1) Test case standardization
+The first problem that we came across we found the need of test case standardization.
+Eg:
+scenario:
+Go to www.magento.com
+-Go to sign in page
+- enter email
+-ente password
+-click on login
+- click on logout.
+we should follow the same standards and order in the frameworks.
+
+2) logging Standardization:
+The second problem that we came across is logging tests
+-This will enable us to have common way of collecting logs.
+Eg: error message- to see what went wrong.
+    warning message - to warn us at a particular test case
+         
+3) Test data and configure utility:
+If we are working on a project and we need to make changes to the test cases we do not need to hardcode all the data again.
+-We can put the data in a file and whenever we want to make a change we can do that.
+
+4) Helper/utility library
+This library would be project exclusive. It will be available only for that particular project.
+Eg:
+If we considrr a test case of logging into an account the email password library would be respect to that particular project only.
+
+5)Test execution engine:
+If all the tests were different we will not be able to run all of them using a consistent ways. This gives us to have a consistent 
+running tests.
+eg: if we are running a test using testng, maven, junit or testng. It has to be defined in the same way and needs to be followed.
+
+6)Reporting utility:
+Reporting was a big concern as all the test for not confirming to a fixed reporting pattern.
+-how many tests completed.
+-time taken to test.
+-start time of test
+-end time of test
+--------------------------------------------------------------------------------------------
+Basic framework design:
+Test runner:
+-This is test execution runner which will run our tests
+Logger:
+To log messages
+Helper/reusable libraries:
+This library would be project exclusive. It will be available only for that particular project.
+Tests:
+running tests for example running on page object model.
+
+-------------------------------------------------------------------------------------
+
+ADVANTAGES OF FRAMEWORKS:
+1)code reuseability.
+2)Since every automation engineer follows the frameworks we can achieve consistency.
+3)It is organized so creating a new functionality or checking the framework would be easy.
+4) Reduces coding efforts and time
+5)Increases coding efficiency.
+Types of frameworks:
+->Data driven framework
+->Hybrid framework:
+ Hybrid framework is a combination of any two frameworks.
+-----------------------------
+Steps involved in frameworks:
+-> Design
+->implementation
+->execution
+
+types of frameworks:
+--> Data driven frameworks
+-->keyword driven frameworks
+-->Hybrid frameworks
+-->POM(page object model)
+-->Page factory model
+
+
+
+
+-------------------------------------------------
+Data driven framework:
+In this framework we use same script with different sets of data.
+->We store all data in external sheet (Excel/CSV).
+------------------------------------------------
+Hybrid framework:
+Combination of frameworks.
+1)POM
+2)Data driven framework

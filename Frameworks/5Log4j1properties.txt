@@ -1,0 +1,87 @@
+Log4j is a java based logging framework
+-It is simple, flexible, reliable and fast
+-It is configered through a configeration file
+Log4j.xml or log4j.properties etc........
+-----------------------------------
+STEP1:
+Add Log4j libraries in the java maven project
+we can add either jar files or maven dependency.
+-we are adding dependencies and adding that to the pom.xml of the project 
+to add dependencies go to 
+https://logging.apache.org/log4j/2.x/maven-artifacts.html
+and copy this
+ <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.14.1</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.14.1</version>
+  </dependency>
+
+STEP2:
+create reference for logger in the class
+i.e class where you want to add log statements
+STEP3:
+create log4j2.properties file :
+we can create a folder as resources under src-> main-> resources(src/main/resources)
+-create log4j2.properties file as log4j1 is outdated and copy this
+name=PropertiesConfig
+property.filename = logs
+appenders = console, file
+
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = [%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+
+appender.file.type = File
+appender.file.name = LOGFILE
+appender.file.fileName=${filename}/MyLogs.log
+appender.file.layout.type=PatternLayout
+appender.file.layout.pattern=[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+
+loggers=file
+logger.file.name=Log4jMaven.Log4jM
+logger.file.level = trace
+logger.file.appenderRefs = file
+logger.file.appenderRef.file.ref = LOGFILE
+
+rootLogger.level = trace
+rootLogger.appenderRefs = stdout
+rootLogger.appenderRef.stdout.ref = STDOUT
+---------------->
+then go to program and run as java application 
+then refresh the project you will see a folder by name logs is created (if not refresh your project)
+and inside that logs file is created 
+with all the log messages inside it
+===========================================
+TIPS AND TRICKS:
+1)you can append log file
+->in the property file after the below line
+appender.file.layout.pattern=[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n
+->add the given line below the above line and refresh the project and run then check the log file)
+appender.file.append=true
+->you will see the log file is appended(added) twice 
+2) you can set logging off when not required(in case heavy logging is making your run slower )
+-> go to property file and go to the line
+rootLogger.level=trace and change the word trace with off
+rootLogger.level=off then refresh project and run program and check log files logged data would be removed
+======================
+SUMMARY:
+-Log4j is configered through configeration file
+-configeration file can be written using properties or xml file format
+-set of key-value pairs
+-within configeration file(here we took property file)
+1)loggers
+2)appenders
+3)layouts 
+are present
+-configering logging via a file has the advantage that logging can be turned on or off
+without modifying the application that uses Log4j.
+------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+

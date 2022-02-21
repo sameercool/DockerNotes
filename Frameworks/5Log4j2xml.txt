@@ -1,0 +1,41 @@
+CREATING A LOG4J USING XML FILE:
+we have already created a maven project 
+-even added dependencies for log4j
+-now create a new file in create Log4j2.xml inside(src/main/resources)
+inside Log4j2.xml and as we have created property file as log4j2.properties before the compiler will
+execute only property file it will not consider xml file as property file is prioritized.
+-so we can rename the file name of property file to Log4j_1.properties
+then create new xml file as Log4j2.xml inside(src/main/resources)
+then copy this xml :
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">logs</Property>
+    </Properties>
+ 
+    <Appenders>
+        <RollingFile name="fileLogger" fileName="${basePath}/MyLogs1.log" filePattern="${basePath}/app-info-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true" />
+            </Policies>
+        </RollingFile>
+ 
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout   pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="Log4jMaven.Log4jM" level="trace" additivity="true">
+            <appender-ref ref="fileLogger" level="trace" />
+        </Logger>
+        <Root level="trace" additivity="false">
+            <appender-ref ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
+-----------------------------
+you will see that the loggers are stored in Log4j2.xml file

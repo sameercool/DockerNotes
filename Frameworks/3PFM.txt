@@ -1,0 +1,13 @@
+PAGE FACTORY MODEL:
+ It is used for initialization of Page objects or to instantiate the Page object itself. 
+page factory model is an inbuilt page object model concept for selenium
+WebDriver but it is very optimized. 
+FINDBY:
+@FindBy annotation is used in PageFactory to locate and declare the web elements using different 
+locators. Here, we pass the attribute as well as its value used for locating the web 
+element to the @FindBy annotation and then the WebElement is declared.
+InItElements():
+The initElements is a static method of PageFactory class which is used to initialize all 
+the web elements located by @FindBy annotation. Thus, instantiating the Page classes easily.
+
+

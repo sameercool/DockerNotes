@@ -1,0 +1,76 @@
+
+
+
+String is basically an object that represents sequence of characters.
+
+
+Strings are final classes in java,once created value cannot be changed.
+Java String is immutable and final.
+
+java string class provides some pre-defined methods to perform operations on string. 
+some are- compare(), concat(), equals(),split(), length(), replace(), compareTo(), toString().
+
+
+Creating a String
+
+1)By String literal :
+String is an object in Java. 
+
+String s=“Welcome”;  
+
+2)using new keyword:-
+
+String str1 = new String("Welcome");
+String str2 = new String("Welcome");
+
+In this case compiler would create two different object in memory having the same string.
+Java String is created by using a keyword “new”.
+For example: String s=new String(“Welcome”);  
+
+
+
+
+Difference between StringBuffer and StringBuilder?
+
+StringBuffer and StringBuilder are mutable classes. StringBuffer operations are thread-safe and synchronized whereas StringBuilder operations are not thread-safe.
+
+StringBuffer is to be used when multiple threads are working on same String and StringBuilder in the single threaded environment.
+
+StringBuilder performance is faster when compared to StringBuffer because of no overhead of synchronized.
+
+equals()---boolean
+-------------------
+1)equals()
+String str = "Hello Java";
+System.out.println(str.equals("Hello Java"));//true
+---
+String str = "Hello Java";
+System.out.println(str.equals("hello java"));//false
+
+== --- boolean
+-------------------
+String s1 = new String("Football");
+	String s2 = new String ("Football");
+	String s3 = "Football";
+	String s4 = "Football";
+	
+	System.out.println(s1==s2);//false
+	System.out.println(s1==s3);//false
+	System.out.println(s1==s4);//false
+	System.out.println(s3==s4);//true
+
+
+1)Write a java program reverse a string using recursion method?
+2)Write a java program to check string is palindrome or not?
+3)write a java program print duplicate characters from string?
+4)write a java program to check two string are anagram of each other?
+5)write a java program to remove duplicate character from the given string? 
+6)write a java program find largest and smallest number in unsorted array?
+7)write a java program to find repeated numbers in array?
+8)write a java program to remove duplicate numbers in given array?
+9)write a java program to find the missing numbers integer array of 1 to 100?
+10)write a java program to find second largest element in an array of integers?
+11)write a  java program to find index of an array element?
+
+
+

@@ -1,0 +1,27 @@
+Data driven frameworks:
+In data driven frameworks we store the data in the property file and with the help of FIS we receive the data in test code
+which is implemented to get the result.
+
+
+------------------------
+Why do we use data driven framework:
+It is the part of functional testing wherin we test each and every component in the application with both valid and invalid data.
+Since there would be so many components the testing data would be huge and the size would be more, 
+it will become difficult to test the data that is the reason we  keep the data in excel sheet.
+--------------------------------------------
+xpath for text():
+//tag[text()='text']
+
+Scenario to be automated:
+step1:
+go to www.magento.com
+step2:
+click on the sign to get to the sign in page.
+step3:
+enter the email
+step4:
+enter the password
+step5:
+click on login (continue)
+step6:
+click on logout.

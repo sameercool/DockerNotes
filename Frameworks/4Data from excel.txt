@@ -1,0 +1,35 @@
+->Why to use excel files
+In selenium we can get data from excel and CSV.
+MS excel is most commonly used.
+Helps to make our data indepent of data handling.
+it helps us avoid hardcoding.
+Helps us to add, update, manage data.
+
+------------------------------------------------------------
+->how to add excel files
+-We can create a new folder naming it as excel and go to the path of file created in file explorer.
+-Then create a new excel file with xlsx if it is new version if the version of excel is old we can use xls
+and enter data in the file.
+-Refresh the project and you will see the file added to your eclipse
+--------------------
+->how to create excel read function
+=>Step1:
+For XlSX we need to create references for workbook a
+-XSSFWorkbook workbook=new XSSFWorkbook("excel file location");
+For XLS we need to create references for workbook a
+-HSSFWorkbool workbook=new HSSFWorkbook("excel file location");
+=>Step2:
+Step 3
+Create references for Worksheet
+XSSFSheet sheet = workbook.getSheet(“sheet name”); 
+
+Step 4
+Call row count function
+
+sheet.getPhysicalNumberOfRows();
+
+----------------------
+ 
+-GetRowCount
+-GetCellData
+->How to call excel functions

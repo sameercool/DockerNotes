@@ -1,0 +1,78 @@
+Xpath:
+XML file:
+<html>
+          <body>
+                    <input type="button"/>
+  
+         </body>
+ </html>
+ 
+Xpath is a language used for locating nodes in an xml document
+-Xpath is used if there is no suitable id present on html page
+-it is used to find the location of the xml document or elements of the html page
+
+1)Absolute
+2)Relative
+Absolute:
+When we traverse through whole xml path from starting to end this is called absolute xpath.
+Absolute xpath is represented single forward slash (/)
+html/body/input/button
+<bookstore>
+
+<book category="cooking">
+<title lang="en">Everyday Italian</title>
+<author>Giana De Laurentiis</author>
+<year>2005</year>
+<price>30.00</price>
+</book>
+
+
+<book category="children">
+<title lang="en">Harry potter</title>
+<author>J K. Rowling</author>
+<year>2005</year>
+<price>29.99</price>
+</book>
+
+</bookstore>
+
+
+eg I want to know the price of 2nd book using absolute xpath we can traverse as below
+/bookstore/book[2]/price
+-------------------------------------------------------------------------------------------------
+Relative Xpath:
+Relative Xpath is represented using (//)
+-it gives us direct location of the particular node in an xml file or html page.
+Xpath using attribute and value:
+//book[@category='cooking']
+1)text():
+it is used to search particular node using the text directly,
+syntax:
+//tag[text()='text you want to find']
+
+eg:
+//price[text()='29.99']
+--------------------------------------------------
+Operators:
+And or
+And operator:
+It specifies that both conditions must be satisfied both the attributes and values should match
+//tag[@attribute1='value1'and @attribute2='value2']
+Or operator:
+-It works if any one of the two attributes is satisfied.
+//tag[@attribute1='value1' or @attribute2='value2']
+eg:
+//book[@category='cooking' or @category='children']
+--------------------------------------------------------------
+Last():
+<html>
+  
+<body>
+  <input type="button"/>male
+  <input type="button"/>female
+  <input type="button"/>others
+  </body>
+  </html>
+it is used to get the last value of the xml file
+syntax:
+//tag[@attribute name='value'][last()]

@@ -1,0 +1,41 @@
+Docker is a devops tool designed to make easier to create,deploy,run and 
+maintain applications using containers.
+-If we consider a system which doesn't have docker.
+-it needs to have a hardware and different os's also hyperwiser as a mediator between hardware
+and os we can consider different os or containers as
+-Jenkins, tomcat, sql server, mobile and BE
+-The hyperwiser is very costly and it affects maintainance.
+-Using docker will reduce the cost and affectiveness of system
+-------------------------------------------------------------
+Advantages of docker:
+Docker uses independent containers or OS if we make change to one OS it will not
+affect the other OS.
+-If we consider normal system for example if RAM assigns 6gb to jenkins and if
+jenkins uses only 4gb the other 2gb is wasted
+-In docker if Ram assigns 6gb and if only 4gb is used docker will assign the
+remaining memory to the another os or container let us consider Tomcat the 
+remaining memory will be assigned to TOmcat.
+------------------------------------------------------------------
+If we consider an example of amazon server.
+It will have Mssql, Be , s2 containers. If docker is not used if we make change
+to one container it will affect the other containers too.
+-If we use docker then if we make change to one container it will not affect the 
+other container.
+-----------------------------
+Other advantages of Docker.
+-Deploy services
+-Maintain
+-Add
+-update
+-Delete
+------------------------------------
+Use of docker in selenium or testing
+if we consider different containers as mozilla , chrome , IE and mozila
+maintainence ,cost will be more without docker.
+-If we use docker it will maintain all the containers and one container will not
+affect the other as every container is independent.
+----------------------------------------------------
+When not to use Docker:
+docker shouldn't be used if there is an old existing framework/system and
+making changes will affect the system.
+

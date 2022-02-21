@@ -1,0 +1,30 @@
+Static:
+Static keyword:
+Static keyword is a non access modifier
+Static variable:
+stat
+static variables belongs to class 
+Static variables helps in memory optmization.
+It makes memory efficient.
+-----------------------------
+Static method:
+Rules:
+1)static methods belongs to class not object.
+2)A static method can be accessed using the class name and doesnt require the object.
+3)A static method should have static data it doesn't allow non static data.
+4)It can only call static methods and cannot call the non static methods.
+5)It cannot refer to this or super keyword.
+------------------------------------
+static block:
+Static block is called automatically we do not need to call the static block.
+During program execution static block is executed before main method.
+-we can create multiple static blocks inside the class.
+-if there is a static block and non static block os will execute static block first then main mehtod is executed.
+------------------------
+Uses:
+-static block is used to access the static members.
+-static block is used to access the data to be executed in the class.
+
+
+
+

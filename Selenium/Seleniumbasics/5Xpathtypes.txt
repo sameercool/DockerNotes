@@ -1,0 +1,128 @@
+Xpath:
+XPath is a language used for locating nodes in XML documents.
+XPath can be used as a substitute when you don't have a suitable id or
+ name attribute for the element you want to locate.
+XPath allows you to select individual elements, attributes, 
+and some other part of XML documents for specifying location of 
+a particular web element.
+OR
+xPATH is a query language for navigating in XML documents
+-To find nodes in XML document or elements in HTML webpage .
+XML path> find nodes
+1. Absolute > Entire Address
+2. Relative
+
+<HTML>
+     <BODY>
+           
+           <div>
+                <input type="button"/>
+            </div>
+       </BODY>
+</HTML>
+eg:
+Absolute XPath:
+Traverses through whole xml path in the page from start
+to end.
+it starts with single forward slash /
+Eg: "HTML/BODY/DIV/INPUT" > button
+----------------------------------------------------------
+
+XML FILE:
+
+
+<bookstore>
+
+<book category="cooking">
+<title lang="en">Everyday Italian</title>
+<author>Giana De Laurentiis</author>
+<year>2005</year>
+<price>30.00</price>
+</book>
+
+
+<book category="children">
+<title lang="en">Harry potter</title>
+<author>J K. Rowling</author>
+<year>2005</year>
+<price>29.99</price>
+</book>
+
+</bookstore>
+-------------------------------------------------------------------------------------------------
+
+for example if we want to get the value J k rowling we can follow the below xpath.
+/bookstore/book[2]/author
+paste the above xml and the xpath in the below link
+http://xpather.com/
+for relative xpath:
+//book[2]/author
+--------------------------
+Xpath using attribute and value:
+syntax:
+//tag[@attribute='value']
+eg://book[@category='children']
+------------------------------------------------
+to generate xpath from the xml file you can go to the below link and then paste the 
+xml file and then click on any particular tag(line) to get the xpath
+https://xmltoolbox.appspot.com/xpath_generator.html
+----------------------------------
+1) text():
+We have text() method in xpath to get the particular element from xml file 
+Syntax:
+//tag[text()='sometext']
+eg: to find the price of harry potter copy the xml to http://xpather.com/
+//price[text()='29.99']
+---------------------------------------------
+2) contains()
+syntax:
+//tag[contains(text(),'ABC')]
+eg:
+//author[contains(text(),'J K. Rowling')]
+---------------------------------------------------------------------------------------------
+Relaive Xpath:
+Using relative xpath we can get the address of the 
+element directly.
+it starts with double front slash (//)
+EG: //tag[@attribute='value']
+for the above xml file we can find the relative xpath for jk rowling the 2nd author as 
+//book[@category='cooking']
+
+-----------------------------------------------------------
+Xpath using or and operators
+
+OR operator:
+It specifies that any one of the condition must be satisfied.
+syntax: //tag[@attribute='value' or @attribute='value']
+eg: //book[@category='cooking' or @category='children']
+-----------------------------------------------------
+AND operator:
+It specifies that both conditions must be satisfied.ie both the attributes and values should be 
+pointing to the same web element.
+syntax: //tag[@attribute='value' or @attribute='value']
+eg: 
+fb.com we consider password text webelement let us take type='password and id='pass'
+//input[@type='password'and@id='pass']
+then it will go to the password field as both are pointing to password field.
+--------------------------------------------
+Radio button in xpath:
+it is used to select a particular radio button on a page
+eg:
+<HTML>
+     <BODY>
+           
+           <div>
+                <input type="radio"/>male
+             <input type="radio"/>female
+              <input type="radio"/>others
+             
+            </div>
+       </BODY>
+</HTML>
+//input[@type='radio'][1] then first would be selected [2] for second and [3] for third
+Last():
+it is used to get the last value of the xml file
+//input[@type='radio'][last()]
+this will select 
+ <input type="radio"/>others
+--------------------------------------------------------------------

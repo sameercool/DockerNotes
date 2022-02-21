@@ -1,0 +1,30 @@
+POLYMORPHISM:
+polymorphism in java means same task to be performed many ways.
+Types:
+1) Run time polymorphism
+-Method overloading.
+2) Compile time polymorphism
+-Method Overriding.
+--------------------
+Methodoverloading.
+Rules:
+- same class
+- same name of the method
+- different arguments.
+-> no of arg
+-> types of arg
+-> sequence of args
+-----------------------
+Methodoverriding.
+Rules:
+- different class
+- same name of the method
+- same arguments.
+-> no of arg
+-> types of arg
+-> sequence of args
+-- here we follow inheritance.
+-----------------------------------------
+Methodoverriding when we create object only for child class we can only call child class and we cant access the parent class
+To overcome this we use super Keyword.
+

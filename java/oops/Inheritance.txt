@@ -1,0 +1,25 @@
+Constructors:
+-Constructor is used to access the Instance (variables inside the class) by creating an object.
+1)default constructor
+2)parameterized constructor
+Rules:
+-the name of the constructor should be same as class name.
+-All the classes will have default constructor .
+-If we do not declare a constructor java will automatically provide a default constructor.
+-------------------
+Inheritance:
+Inheritance in java is mechanism in which the child class will inherit the properties of parent class.
+Advantages:
+1 code reusability.
+2 we can achieve polymorphism.
+types:
+1 single level
+eg : A B -here B will inherit the features of A.
+we only have single child and parent class.
+
+2 multi level
+eg A B C- here c and b will be having features of A.
+3 multiple/hierarchy.
+Eg:
+A B C
+if we want to have C the features of A and B 

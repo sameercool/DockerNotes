@@ -1,0 +1,73 @@
+An exception is an unwanted or unexpected event, which occurs
+during the execution of a program i.e at run time, that disrupts
+the normal flow of the program.
+Eg;
+Opening a file and file is not present it is an exception.
+-we are asking for the input from the user and user is not giving
+an input it is an exception.
+- trying to run a process and cpu is unavailable.
+- dividing a number by zero.
+----------------------------
+Hierarchy:
+Throwable class-> exception(can be handled)- checked
+                                           -unchecked
+               ->error(cannot be handled) 
+------------------------------------
+Statement- when we are writing a code there would be two statements
+         Normal and critical.
+Eg:normal- int i=1;
+   critical- int k=i/j;(here k is critical as the j value shouldn't be 0 
+                        or it will give an exception.
+To handle critical statements we have to use try block.
+eg:
+try
+{
+int i=j/k
+}
+here the try will throw the exception and the catch block will catch as the 
+exception here is arithmetic we need to write arithmeticexception catch.
+
+catch
+{
+//some code
+}
+if in the same program if we have another exception which is inputfile doesn't
+exist exception we need to write another catch block.
+try{
+FileOutpuStream fos=new FileOutputStream("abc.txt");
+}
+catch(ArithmeticException ae)
+{
+//some code
+}
+catch(IOException ie)
+{
+//some code
+}
+If there is another exception we need to add another catch block.
+-If we do not know what kind of exception we can use the below exception 
+catch block.
+catch(Exception e)
+{
+//some code
+}
+ 
+Throws:
+if there are three methods a() b() c() and c() is depending upon b() and b() is depending
+upon a(). If there is an exception in c() we can ask b() to handle the exception,
+if b() too cannot handle the exception we will send that to a().
+a()
+{
+b();
+}
+b()
+{
+c();
+}
+c()
+{
+//exception throw
+//can handle exception
+
+
+ 

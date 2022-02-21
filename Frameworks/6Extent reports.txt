@@ -1,0 +1,39 @@
+Extent report is an HTML reporting library.
+-It helps us create a report in html format.
+-It is an open source reporting API for Java and .Net.
+-It creates interactive HTML report of your test session.
+-------------------------------------------------------------
+
+->How to implement extent reports in selenium java frameworks
+To add extent report dependencies copy this to the pom.xml file of your project
+
+<!-- pom.xml -->
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.5</version>
+</dependency>
+
+you will find this in the below link
+https://www.extentreports.com/docs/versions/3/java/#basic-example
+---------------------------------------------------------------
+scenario:
+we need to get to google.com-> enter data on the search -> click on search
+ 
+we can get the basic program for extent reports in the below link 
+on the right side of the page click on examples-> Basic Usage Example
+-----------------------------------
+next step is using extentReportfunctions
+log, pass , info etc
+---------------
+then run the eclipse program
+ ------------
+the program will run and quit
+----------------
+in the next step you need to refresh the project and you will see that extentReports.html will be created abovr
+pom.xml
+-right click on the extentReport.html->open with->system editor(chrome)
+-you will see the report in chrome you will have status which will show you the status of the test cases
+- you will see the search bar  to search various tests
+-------------------------------------
+you can make changes to any of the pass log to fail and run again to see how fail logs look
